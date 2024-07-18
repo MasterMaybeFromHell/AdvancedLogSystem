@@ -13,4 +13,4 @@
  
  **-** Logging information on who killed who(WhoKilledWho).
  
- **-** Logging room entry and exit."
+ **-** Logging room entry and exit.
