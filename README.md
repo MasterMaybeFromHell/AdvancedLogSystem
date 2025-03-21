@@ -14,3 +14,5 @@
  **-** Logging information on who killed who(WhoKilledWho).
  
  **-** Logging room entry and exit.
+ 
+Use MelonLoader 0.7.0
