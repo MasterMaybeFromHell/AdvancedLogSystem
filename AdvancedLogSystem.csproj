@@ -1,288 +1,265 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5D1079AA-4A98-415E-B902-B12B88F03013}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
     <RootNamespace>AdvancedLogSystem</RootNamespace>
+    <LangVersion>default</LangVersion>
+    <LangVersion>latest</LangVersion>
+    <IsPackable>false</IsPackable>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <NeutralLanguage>en-US</NeutralLanguage>
     <AssemblyName>AdvancedLogSystem</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <Deterministic>true</Deterministic>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+  <PropertyGroup>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="0Harmony">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\0Harmony.dll</HintPath>
-    </Reference>
-    <Reference Include="ACTk.Examples.Genuine.Runtime">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\ACTk.Examples.Genuine.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="ACTk.Examples.Runtime">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\ACTk.Examples.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="ACTk.Runtime">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\ACTk.Runtime.dll</HintPath>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\Assembly-CSharp.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\Assembly-CSharp.dll</HintPath>
     </Reference>
-    <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\Assembly-CSharp-firstpass.dll</HintPath>
+    <Reference Include="Il2CppACTk.Examples.Genuine.Runtime">
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\Il2CppACTk.Examples.Genuine.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppACTk.Examples.Runtime">
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\Il2CppACTk.Examples.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppACTk.Runtime">
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\Il2CppACTk.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppGoogleMobileAds">
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\Il2CppGoogleMobileAds.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppMeshBakerCore">
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\Il2CppMeshBakerCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppMeshExtension">
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\Il2CppMeshExtension.dll</HintPath>
     </Reference>
     <Reference Include="Il2CppMono.Security">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\Il2CppMono.Security.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\Il2CppMono.Security.dll</HintPath>
     </Reference>
     <Reference Include="Il2Cppmscorlib">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\Il2Cppmscorlib.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\Il2Cppmscorlib.dll</HintPath>
     </Reference>
-    <Reference Include="Il2CppSystem">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\Il2CppSystem.dll</HintPath>
+    <Reference Include="Il2CppPhoton3Unity3D">
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\Il2CppPhoton3Unity3D.dll</HintPath>
     </Reference>
     <Reference Include="Il2CppSystem.Configuration">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\Il2CppSystem.Configuration.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\Il2CppSystem.Configuration.dll</HintPath>
     </Reference>
     <Reference Include="Il2CppSystem.Core">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\Il2CppSystem.Core.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\Il2CppSystem.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem">
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\Il2CppSystem.dll</HintPath>
     </Reference>
     <Reference Include="Il2CppSystem.Xml">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\Il2CppSystem.Xml.dll</HintPath>
-    </Reference>
-    <Reference Include="MelonLoader">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\MelonLoader.dll</HintPath>
-    </Reference>
-    <Reference Include="Photon3Unity3D">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\Photon3Unity3D.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
-    <Reference Include="UnhollowerBaseLib">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnhollowerBaseLib.dll</HintPath>
-    </Reference>
-    <Reference Include="UnhollowerRuntimeLib">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnhollowerRuntimeLib.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\Il2CppSystem.Xml.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AccessibilityModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.AccessibilityModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.AccessibilityModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.AIModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.AIModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AndroidJNIModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.AndroidJNIModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.AndroidJNIModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AnimationModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.AnimationModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.AnimationModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ARModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.ARModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.ARModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AssetBundleModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.AssetBundleModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.AssetBundleModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AudioModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.AudioModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.AudioModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ClothModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.ClothModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.ClusterInputModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.ClusterInputModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.ClusterRendererModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.ClusterRendererModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.ClothModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CrashReportingModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.CrashReportingModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.CrashReportingModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.DirectorModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.DirectorModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.DSPGraphModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.DSPGraphModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.DSPGraphModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.GameCenterModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.GameCenterModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.GameCenterModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.GridModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.GridModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.GridModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.HotReloadModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.HotReloadModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Il2CppAssetBundleManager">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.Il2CppAssetBundleManager.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Il2CppImageConversionManager">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.Il2CppImageConversionManager.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.HotReloadModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ImageConversionModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.ImageConversionModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.ImageConversionModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.IMGUIModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.IMGUIModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.IMGUIModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.InputLegacyModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.InputLegacyModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.InputLegacyModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.InputModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.InputModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.JSONSerializeModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.JSONSerializeModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.LocalizationModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.LocalizationModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.InputModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ParticleSystemModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.ParticleSystemModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.ParticleSystemModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.PerformanceReportingModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.PerformanceReportingModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.PerformanceReportingModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Physics2DModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.Physics2DModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.Physics2DModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.PhysicsModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.PhysicsModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.PhysicsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ProfilerModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.ProfilerModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.ProfilerModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ScreenCaptureModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.ScreenCaptureModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.ScreenCaptureModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SharedInternalsModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.SharedInternalsModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.SharedInternalsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpriteMaskModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.SpriteMaskModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.SpriteMaskModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpriteShapeModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.SpriteShapeModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.SpriteShapeModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.StreamingModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.StreamingModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.StreamingModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SubstanceModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.SubstanceModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.SubstanceModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SubsystemsModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.SubsystemsModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.SubsystemsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TerrainModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.TerrainModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.TerrainModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TerrainPhysicsModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.TerrainPhysicsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TextCoreModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.TextCoreModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.TextCoreModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TextRenderingModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.TextRenderingModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.TextRenderingModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TilemapModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.TilemapModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.TilemapModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TLSModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.TLSModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.TLSModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.UI.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UIElementsModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.UIElementsModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.UIElementsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UIModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.UIModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.UIModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UmbraModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.UmbraModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.UmbraModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UNETModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.UNETModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.UNETModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityAnalyticsModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.UnityAnalyticsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityConnectModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.UnityConnectModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.UnityConnectModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityTestProtocolModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.UnityTestProtocolModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestAudioModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.UnityWebRequestModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestTextureModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestWWWModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VehiclesModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.VehiclesModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.VehiclesModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VFXModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.VFXModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.VFXModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VideoModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.VideoModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.VideoModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VRModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.VRModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.VRModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.WindModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.WindModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.WindModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.XRModule">
-      <HintPath>F:\Slendytubbies 3 V2.5\MelonLoader\Ссылки\UnityEngine.XRModule.dll</HintPath>
+      <HintPath>F:\Slendytubbies\MelonLoader\Il2CppAssemblies\UnityEngine.XRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="MelonLoader">
+      <HintPath>F:\Slendytubbies\MelonLoader\net6\MelonLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>F:\Slendytubbies\MelonLoader\net6\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppInterop.Runtime">
+      <HintPath>F:\Slendytubbies\MelonLoader\net6\Il2CppInterop.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppInterop.Common">
+      <HintPath>F:\Slendytubbies\MelonLoader\net6\Il2CppInterop.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <HintPath>D:\For Projects\Libraries\MelonLoader\mcs.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainScript.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Main.cs" />
+	<Compile Include="Patches.cs" />
+    <Compile Include="AdvancedLogger.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="ConfigManager.cs" />
+    <Compile Include="CustomCodeLoader.cs" />
+    <Compile Include="ScriptEvaluator.cs" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>xcopy /q/y/i "$(TargetPath)" "F:\Slendytubbies 3 V2.5\Mods\" /E /H /C</PostBuildEvent>
-  </PropertyGroup>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="COPY &quot;$(TargetPath)&quot; &quot;F:\Slendytubbies\Mods&quot;" />
+  </Target>
 </Project>
